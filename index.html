@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Espaços e Equipamentos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #f4f7f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #003344;
+      color: white;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header nav a, #langToggle {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .banner {
+      position: relative;
+      height: 300px;
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      overflow: hidden;
+    }
+    .banner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .banner h1 {
+      font-size: 2.5em;
+      z-index: 2;
+      text-align: center;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2.section-title {
+      margin-top: 60px;
+      margin-bottom: 20px;
+      font-size: 1.6em;
+      color: #003344;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+    p {
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 15px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #006699;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease, transform 0.3s ease;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background-color: #004d66;
+      transform: translateY(-2px);
+    }
+    .documentos a {
+      display: inline-block;
+      padding: 12px 16px;
+      background-color: #005580;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-bottom: 10px;
+      transition: background 0.3s;
+    }
+    .documentos a:hover {
+      background-color: #003f5c;
+    }
+    footer {
+      background-color: #e0e0e0;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      font-size: 14px;
+    }
+    #topBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #006699;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      display: none;
+      font-size: 18px;
+      z-index: 999;
+    }
+    #topBtn:hover {
+      background-color: #004d66;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><strong>Gonçalo de Lira Pereira</strong></div>
+      <div>
+        <a href="#inicio" data-pt="Início" data-en="Home">Início</a>
+        <a href="#projeto" data-pt="Projeto" data-en="Project">Projeto</a>
+        <a href="#documentos" data-pt="Documentos" data-en="Documents">Documentos</a>
+        <a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a>
+        <button id="langToggle">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1 data-pt="Gestão de Espaços e Equipamentos" data-en="Space and Equipment Management">Gestão de Espaços e Equipamentos</h1>
+  </section>
+
+  <main class="container">
+    <section id="inicio" class="fade-in">
+      <h2 class="section-title" data-pt="📱 Descrição do Projeto" data-en="📱 Project Description">📱 Descrição do Projeto</h2>
+      <p data-pt="Este projeto foi desenvolvido no âmbito da unidade curricular de Projeto de Engenharia Informática em Contexto Empresarial. A aplicação permite a gestão de reservas de salas e equipamentos em contexto empresarial ou académico, oferecendo funcionalidades modernas como autenticação, QR Code, notificações e reporte de avarias." 
+         data-en="This project was developed as part of the Software Engineering Project course. The app allows room and equipment booking in academic or business contexts, offering modern features like authentication, QR codes, notifications, and issue reporting.">
+        Este projeto foi desenvolvido no âmbito da unidade curricular de Projeto de Engenharia Informática em Contexto Empresarial. A aplicação permite a gestão de reservas de salas e equipamentos em contexto empresarial ou académico, oferecendo funcionalidades modernas como autenticação, QR Code, notificações e reporte de avarias.
+      </p>
+      <a class="btn" href="https://github.com/Gonca1313/gestao-reservas-flutter" target="_blank" data-pt="🔗 Ver Código no GitHub" data-en="🔗 View Code on GitHub">🔗 Ver Código no GitHub</a>
+    </section>
+
+    <section id="projeto" class="fade-in">
+      <h2 class="section-title" data-pt="🛠️ Funcionalidades" data-en="🛠️ Features">🛠️ Funcionalidades</h2>
+      <ul>
+        <li data-pt="✔️ Autenticação de utilizadores com Firebase" data-en="✔️ User authentication with Firebase">✔️ Autenticação de utilizadores com Firebase</li>
+        <li data-pt="✔️ Criação, edição e cancelamento de reservas" data-en="✔️ Create, edit and cancel bookings">✔️ Criação, edição e cancelamento de reservas</li>
+        <li data-pt="✔️ Geração de QR Code para reservas" data-en="✔️ QR Code generation for bookings">✔️ Geração de QR Code para reservas</li>
+        <li data-pt="✔️ Reporte de avarias com registo e estado" data-en="✔️ Issue reporting with status tracking">✔️ Reporte de avarias com registo e estado</li>
+        <li data-pt="✔️ Interface responsiva e moderna (Flutter Web/Mobile)" data-en="✔️ Responsive and modern interface (Flutter Web/Mobile)">✔️ Interface responsiva e moderna (Flutter Web/Mobile)</li>
+      </ul>
+    </section>
+
+    <section id="documentos" class="documentos fade-in">
+      <h2 class="section-title" data-pt="📄 Documentos para Download" data-en="📄 Documents for Download">📄 Documentos para Download</h2>
+      <ul>
+        <li><a href="docs/Relatório_Final.pdf" target="_blank" rel="noopener" data-pt="📘 Relatório Final (PDF)" data-en="📘 Final Report (PDF)">📘 Relatório Final (PDF)</a></li>
+        <li><a href="docs/Apresentação.pptx" target="_blank" rel="noopener" data-pt="📊 Apresentação Final (PPTX)" data-en="📊 Final Presentation (PPTX)">📊 Apresentação Final (PPTX)</a></li>
+      </ul>
+    </section>
+
+    <section id="sobre" class="fade-in">
+      <h2 class="section-title" data-pt="🙋 Sobre o Autor" data-en="🙋 About the Author">🙋 Sobre o Autor</h2>
+      <p data-pt="O meu nome é Gonçalo de Lira Pereira, estudante finalista da Licenciatura em Engenharia Informática no ISPGAYA – Instituto Superior Politécnico Gaya. Este projeto representa a aplicação prática de competências adquiridas ao longo do curso, com foco em desenvolvimento móvel, interfaces modernas, e integração com serviços na cloud."
+         data-en="My name is Gonçalo de Lira Pereira, a final-year student in Computer Engineering at ISPGAYA – Instituto Superior Politécnico Gaya. This project represents the practical application of skills acquired throughout the course, with a focus on mobile development, modern interfaces, and cloud service integration.">
+        O meu nome é Gonçalo de Lira Pereira...
+      </p>
+      <p>
+        💼 <strong>Competências / Skills:</strong> Flutter, Firebase, UI/UX, Firestore, GitHub, Software Engineering<br>
+        📧 <a href="mailto:ispg2020101880@ispgaya.pt">ispg2020101880@ispgaya.pt</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Gonçalo de Lira Pereira · Engenharia Informática · ISPGAYA
+  </footer>
+
+  <button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+  <script>
+    // Mostrar botão ao fazer scroll
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = () => {
+      topBtn.style.display = document.documentElement.scrollTop > 200 ? "block" : "none";
+    };
+
+    // Fade-in ao carregar secções
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => observer.observe(section));
+
+    // Tradução dinâmica
+    let currentLang = 'pt';
+    const toggleLangBtn = document.getElementById('langToggle');
+
+    function switchLanguage() {
+      currentLang = currentLang === 'pt' ? 'en' : 'pt';
+      toggleLangBtn.textContent = currentLang === 'pt' ? 'EN' : 'PT';
+      document.querySelectorAll('[data-pt]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+      });
+    }
+
+    toggleLangBtn.addEventListener('click', switchLanguage);
+  </script>
+</body>
+</html>
